@@ -1,0 +1,57 @@
+/* Pre-paint guard: while any topic is active, a post stays blurred until the
+   engine classifies it and sets data-ss-state ("clear" | "blocked" | "revealed").
+   Heavy blur, not visibility:hidden — fail OPEN: if classification never
+   happens (bug, missed mutation), the post is a visible blurred blob you can
+   report, not a silent hole in the feed. Still spoiler-safe. */
+html[data-ss-active] shreddit-post:not([data-ss-state]) {
+  filter: blur(40px);
+}
+
+/* Blocked post: blur the entire card, thumbnail included. filter on the host
+   element blurs shadow-DOM content too. No overlay/button is injected (see
+   engine.js header comment) — the first click on a blurred post reveals it,
+   intercepted by a capture-phase listener before Reddit can navigate. */
+/* Generic, not shreddit-post-specific: search-result cards (plain divs) get
+   blocked too. Only this extension ever sets data-ss-state.
+   Known gap: the pre-paint guard above only covers shreddit-post, so search
+   results can flash briefly before classification — acceptable since search
+   is a deliberate act, unlike scrolling the home feed. */
+[data-ss-state="blocked"] {
+  filter: blur(16px);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Badge layer: lives on document.body, OUTSIDE Reddit's feed (see engine.js
+   header comment). Badges are positioned over their posts via transform,
+   updated on scroll/resize. pointer-events:none so clicks fall through to
+   the blurred post, which is what triggers the reveal. */
+#ss-badge-layer {
+  /* Document flow, not fixed: badges hold page coordinates and scroll in
+     sync with their posts automatically. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
+  /* Deliberately low: above feed cards (which are z-auto), below Reddit's
+     sticky header, dropdowns, and modals, so badges slide UNDER those
+     instead of floating on top of everything. */
+  z-index: 2;
+}
+
+.ss-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #7c3aed;
+  color: #fff;
+  font: 600 13px system-ui, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}

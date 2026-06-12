@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Spoiler Shield — Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Spoiler Shield</h1>
+      <div class="toolbar">
+        <button id="add-topic" type="button">+ Add topic</button>
+        <button id="export" type="button">Export</button>
+        <label class="file-button">
+          Import
+          <input id="import" type="file" accept=".json,application/json" />
+        </label>
+      </div>
+    </header>
+
+    <p class="help">
+      A topic blurs a post when its <strong>subreddit</strong> matches any
+      pattern (<code>*</code> is a wildcard, e.g. <code>*f1*</code>), or its
+      <strong>title/flair</strong> contains any keyword (whole words,
+      case-insensitive; multi-word keywords match as a phrase). One entry per
+      line. Toggle topics on/off from the extension's toolbar popup.
+      Import <em>merges</em>: it only ever adds topics/entries (deduplicated)
+      and never overwrites or deletes what you already have.
+    </p>
+
+    <div id="topics"></div>
+
+    <footer>
+      <button id="save" type="button" class="primary">Save changes</button>
+      <span id="status"></span>
+    </footer>
+
+    <script src="../shared/storage.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

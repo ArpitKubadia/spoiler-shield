@@ -1,0 +1,144 @@
+body {
+  font: 14px system-ui, sans-serif;
+  max-width: 760px;
+  margin: 32px auto 80px;
+  padding: 0 16px;
+  color: #1a1a1b;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+}
+
+.help {
+  color: #555;
+  line-height: 1.5;
+}
+
+.help code {
+  background: #f1f1f1;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.topic-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.topic-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.topic-head input[type="text"] {
+  flex: 1;
+  font: 600 15px system-ui, sans-serif;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.topic-head label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 110px;
+  font: 13px ui-monospace, monospace;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+button,
+.file-button {
+  font: inherit;
+  padding: 7px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f6f6f6;
+  cursor: pointer;
+}
+
+button:hover,
+.file-button:hover {
+  background: #ededed;
+}
+
+button.primary {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  color: #fff;
+}
+
+button.primary:hover {
+  background: #6d28d9;
+}
+
+button.danger {
+  color: #b91c1c;
+  margin-left: auto;
+}
+
+.file-button input {
+  display: none;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#status {
+  color: #15803d;
+  font-weight: 600;
+}
+
+#status.error {
+  color: #b91c1c;
+}

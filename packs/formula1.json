@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "name": "Formula 1",
+      "enabled": false,
+      "subredditPatterns": [
+        "formula1",
+        "formuladank",
+        "*f1*",
+        "formula*",
+        "grandprix*",
+        "redbullracing",
+        "mercedesamg*",
+        "scuderiaferrari",
+        "mclaren",
+        "astonmartin*",
+        "williamsracing",
+        "alpinef1team"
+      ],
+      "keywords": [
+        "verstappen",
+        "hamilton",
+        "norris",
+        "leclerc",
+        "piastri",
+        "russell",
+        "alonso",
+        "sainz",
+        "gasly",
+        "ocon",
+        "albon",
+        "stroll",
+        "tsunoda",
+        "hulkenberg",
+        "antonelli",
+        "bearman",
+        "lawson",
+        "hadjar",
+        "bortoleto",
+        "colapinto",
+        "grand prix",
+        "qualifying",
+        "pole position",
+        "podium",
+        "fastest lap",
+        "safety car"
+      ]
+    }
+  ]
+}

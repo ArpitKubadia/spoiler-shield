@@ -1,0 +1,109 @@
+body {
+  font: 13px system-ui, sans-serif;
+  width: 280px;
+  margin: 0;
+  color: #1a1a1b;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+#topics {
+  padding: 6px 0;
+}
+
+#topics.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.topic-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+}
+
+.topic-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topic-empty {
+  color: #888;
+  font-size: 11px;
+  margin-left: 6px;
+}
+
+footer {
+  padding: 10px 14px;
+  border-top: 1px solid #e5e5e5;
+}
+
+#open-options {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f6f6f6;
+  font: inherit;
+  cursor: pointer;
+}
+
+#open-options:hover {
+  background: #ededed;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  flex: none;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #ccc;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.15s;
+}
+
+.switch input:checked + .slider {
+  background: #7c3aed;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(16px);
+}
