@@ -27,11 +27,11 @@ Everything needed to publish. Build the upload zip with `scripts/package.sh`.
 - **Single purpose:** Hides user-selected spoiler topics on reddit.com by blurring matching posts.
 - **storage permission:** Saves the user's topic lists and toggle state, synced via Chrome's own storage sync.
 - **Host access (www.reddit.com, sh.reddit.com):** The content script must read post titles/subreddit names on Reddit pages to decide what to blur. All matching happens locally.
-- **Remote code:** None. No analytics, no external requests of any kind.
+- **Remote code:** None. The only network activity is fetching community topic-pack JSON (data, not code) from this project's public GitHub repo, and only when the user opens the options page or clicks Add/Refresh there.
 
 ## Privacy policy (host this text anywhere public, e.g. a GitHub page, and link it)
 
-> Spoiler Shield does not collect, transmit, sell, or share any data. All settings (topic names, subreddit patterns, keywords, toggles) are stored in Chrome's extension storage in your browser and, if you're signed into Chrome, synced by Google's chrome.storage.sync — never by us. The extension makes no network requests. Page content is read only locally to decide which posts to blur and is never recorded.
+> Spoiler Shield does not collect, transmit, sell, or share any data. All settings (topic names, subreddit patterns, keywords, toggles) are stored in Chrome's extension storage in your browser and, if you're signed into Chrome, synced by Google's chrome.storage.sync — never by us. The extension's only network requests fetch the public community topic-pack catalog (JSON files in the project's open-source GitHub repository) when you open its options page; nothing about you is sent. Page content is read only locally to decide which posts to blur and is never recorded.
 
 ## Submission steps
 

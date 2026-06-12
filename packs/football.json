@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "name": "Football (Soccer)",
+      "enabled": false,
+      "subredditPatterns": [
+        "soccer",
+        "premierleague",
+        "championsleague",
+        "europaleague",
+        "laliga",
+        "seriea",
+        "bundesliga",
+        "ligue1",
+        "mls",
+        "worldcup",
+        "footballhighlights",
+        "reddevils",
+        "liverpoolfc",
+        "chelseafc",
+        "gunners",
+        "coys",
+        "mcfc",
+        "realmadrid",
+        "barca",
+        "fcbayern",
+        "juve",
+        "acmilan",
+        "borussiadortmund",
+        "psg"
+      ],
+      "keywords": [
+        "match thread",
+        "post match",
+        "full time",
+        "hat trick",
+        "messi",
+        "ronaldo",
+        "mbappe",
+        "haaland",
+        "bellingham",
+        "salah",
+        "kane",
+        "vinicius",
+        "yamal"
+      ]
+    }
+  ]
+}

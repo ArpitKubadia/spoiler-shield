@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "name": "NBA",
+      "enabled": false,
+      "subredditPatterns": [
+        "nba",
+        "*nba*",
+        "lakers",
+        "warriors",
+        "bostonceltics",
+        "torontoraptors",
+        "sixers",
+        "chicagobulls"
+      ],
+      "keywords": [
+        "game thread",
+        "post game",
+        "buzzer beater",
+        "game 7",
+        "nba finals",
+        "lebron",
+        "curry",
+        "giannis",
+        "jokic",
+        "doncic",
+        "wembanyama"
+      ]
+    }
+  ]
+}

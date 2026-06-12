@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "name": "UFC / MMA",
+      "enabled": false,
+      "subredditPatterns": ["ufc", "mma", "mmamemes"],
+      "keywords": [
+        "ufc",
+        "tko",
+        "submission win",
+        "main event",
+        "mcgregor",
+        "jon jones",
+        "makhachev",
+        "pereira"
+      ]
+    }
+  ]
+}

@@ -57,13 +57,21 @@ Tips that make topics effective:
 - Worried about over-blurring? Err broad anyway: a wrongly blurred post costs
   one click to reveal; a missed spoiler can't be unseen.
 
-### Topic packs
+### Community packs
 
-`packs/` holds ready-made topic JSON files (e.g. `packs/formula1.json`, a
-fuller F1 set than the built-in default). Import one via the options page —
-since imports merge, packs stack safely on top of whatever you have, and
-re-importing an updated pack just picks up the new entries. Made a good pack
-for a show or sport? It's just a JSON file — share it.
+Nobody should have to figure out the F1 (or cricket, or NBA) subreddit
+universe alone — that knowledge is crowdsourced in `packs/`: plain JSON
+files in this repo, cataloged by `packs/index.json` and served raw from
+GitHub. The options page has a **Community packs** browser: one click adds a
+pack, "Re-sync" picks up whatever the community added since — always safe,
+because pack installs go through the same merge-and-dedupe as imports and
+can never overwrite or delete your own entries. The registry URL is
+configurable, so forks can run their own.
+
+Contributing back is built in: the **Share** button on any topic downloads
+it as a pack file and opens a prefilled GitHub page that walks you through
+the pull request. Guidelines and the format live in `CONTRIBUTING.md`.
+Current starter packs: Formula 1, Football (Soccer), Cricket, UFC/MMA, NBA.
 
 ## How it works
 
@@ -131,6 +139,11 @@ silently hidden).
   Developer mode, "Load unpacked", pick the folder. (No auto-updates that way.)
 - **Chrome Web Store:** `docs/STORE_LISTING.md` is a complete submission kit —
   listing copy, permission justifications, privacy-policy text, and steps.
+- **Activate the community-pack registry:** publish this repo
+  (`gh repo create spoiler-shield --public --source . --push`), then replace
+  `REPLACE_WITH_YOUR_USER` in `extension/src/options/options.js` (one line)
+  with the GitHub owner. That turns on the packs browser and the
+  Share-to-pull-request flow.
 - First install opens the options page automatically so new users see how
   topics work.
 

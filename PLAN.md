@@ -144,6 +144,14 @@ Work through in order. Each has a Definition of Done; update the Progress Log wh
 
 - [x] M6 distribution prep (2026-06-11, v0.4.0) — session notes below.
 
+**2026-06-11 session, part 2 (v0.5.0) — community pack registry (arpit's priority):**
+- Model: uBlock-filter-list style. `packs/` in this repo IS the registry — plain JSON, `packs/index.json` as catalog, served from GitHub raw (CORS-open, no backend, contributions via normal PRs).
+- Options page gained a **Community packs** browser: fetches the catalog, lists packs with Add/"Re-sync" buttons; installs go through the shared `mergeTopicsInto()` (refactored out of importConfig; reports "N added, M extended — nothing removed"). Installed pack ids tracked under a separate `registry` storage key (kept out of the topic config schema on purpose — migrate() would strip unknown fields). Registry URL is user-editable (forks can self-host).
+- **Share** button per topic: downloads a single-topic pack file and opens GitHub's prefilled new-file page (`/new/main?filename=…&value=…`) — GitHub walks the contributor through fork+PR. No backend anywhere.
+- New packs beyond F1 to prove generality: football.json, cricket.json, ufc.json, nba.json (seed-quality keyword lists — community improves via PR). CONTRIBUTING.md documents format, matching semantics, guidelines (names over generic words, enabled:false always, no harassment lists), both contribution paths.
+- STORE_LISTING privacy text updated honestly: options page now fetches pack JSON from GitHub (data, not code; nothing sent).
+- **BLOCKED on arpit (no `gh` CLI on this machine):** publish the repo, then replace `REPLACE_WITH_YOUR_USER` in `extension/src/options/options.js` (single line — sets both registry URL and Share flow). Until then the packs browser shows a graceful "not published yet" note, and Share still downloads the file.
+
 **2026-06-11 session (v0.4.0) — everything done, for arpit's review:**
 - Reviewed arpit's own change (merge-on-import in options.js): logic kept as-is, hardened two spots — (1) dedupe is now case-insensitive + trims entries (matching is case-insensitive, so "Verstappen"/"verstappen" were silent dupes), via a `mergeUnique` helper; (2) appended topics always get a fresh `id` (imported ids like "f1" collide across everyone's exports; topic NAME is the merge identity).
 - `storage.js migrate()` now normalizes every topic on load (missing arrays/fields filled in) so hand-edited or imported configs can't crash the engine/options page.

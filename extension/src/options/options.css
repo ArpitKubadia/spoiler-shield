@@ -34,6 +34,55 @@ h1 {
   border-radius: 3px;
 }
 
+#packs-section {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 4px 16px 12px;
+  background: #fafafa;
+}
+
+.packs-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.packs-head h2,
+.topics-heading {
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+.pack-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+}
+
+.pack-desc {
+  color: #666;
+  font-size: 12px;
+}
+
+.registry-cfg {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.registry-cfg input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 6px 8px;
+  font: 12px ui-monospace, monospace;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
 .topic-card {
   border: 1px solid #ddd;
   border-radius: 10px;

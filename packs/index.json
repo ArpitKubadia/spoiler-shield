@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "packs": [
+    {
+      "id": "formula1",
+      "name": "Formula 1",
+      "description": "Races, qualifying, drivers — F1 subs plus leakage into general subs",
+      "file": "formula1.json"
+    },
+    {
+      "id": "football",
+      "name": "Football (Soccer)",
+      "description": "Match results, league and club subs, star players",
+      "file": "football.json"
+    },
+    {
+      "id": "cricket",
+      "name": "Cricket",
+      "description": "Matches, IPL and international cricket, key players",
+      "file": "cricket.json"
+    },
+    {
+      "id": "ufc",
+      "name": "UFC / MMA",
+      "description": "Fight results and event discussion",
+      "file": "ufc.json"
+    },
+    {
+      "id": "nba",
+      "name": "NBA",
+      "description": "Game results, playoff threads, star players",
+      "file": "nba.json"
+    }
+  ]
+}
