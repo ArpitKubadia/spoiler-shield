@@ -2,6 +2,12 @@
   "version": 1,
   "packs": [
     {
+      "id": "fifa-worldcup",
+      "name": "FIFA World Cup",
+      "description": "World Cup 2026 — match results, knockout drama, star players",
+      "file": "fifa-worldcup.json"
+    },
+    {
       "id": "formula1",
       "name": "Formula 1",
       "description": "Races, qualifying, drivers — F1 subs plus leakage into general subs",

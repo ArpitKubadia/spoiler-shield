@@ -1,10 +1,11 @@
 # Spoiler Shield
 
 A Chrome extension that blurs spoiler-prone posts on Reddit. Haven't watched
-the F1 race yet? Toggle the **Formula 1** topic on — every related post
-(including ones from subreddits you don't follow that Reddit recommends to
-you) shows up as a blurred card instead of a spoiler. Watched it? Toggle off,
-or click any blurred post to reveal just that one.
+the F1 race or last night's World Cup match yet? Toggle the **Formula 1** or
+**FIFA World Cup** topic on — every related post (including ones from
+subreddits you don't follow that Reddit recommends to you) shows up as a
+blurred card instead of a spoiler. Watched it? Toggle off, or click any
+blurred post to reveal just that one.
 
 Works on new Reddit (www.reddit.com) in desktop Chrome.
 

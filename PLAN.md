@@ -144,6 +144,13 @@ Work through in order. Each has a Definition of Done; update the Progress Log wh
 
 - [x] M6 distribution prep (2026-06-11, v0.4.0) — session notes below.
 
+**2026-06-11 session, part 3 (v0.6.0) — World Cup launch prep:**
+- Repo is PUBLIC: https://github.com/ArpitKubadia/spoiler-shield (arpit pushed; registry verified serving HTTP 200; arpit set REPO_URL in options.js himself).
+- `packs/fifa-worldcup.json` created and featured FIRST in `packs/index.json` (World Cup 2026 started today). DEFAULT_CONFIG now ships Formula 1 (full pack list) + FIFA World Cup + TV-Shows template — defaults touch fresh installs only; existing users add via packs browser.
+- Manifest = store SEO surface: name "Spoiler Shield: Hide Reddit Spoilers" (+ short_name), keyword-rich 132-char description, homepage_url → repo, v0.6.0.
+- STORE_LISTING.md rewritten as a full launch kit: WC+F1-led description copy, SEO guidance, exact 1280×800 screenshot shot list for arpit (5 shots), 440×280 promo-tile spec with tagline "Watch first. Scroll later.", launch checklist (GitHub About/topics, post ideas).
+- Known judgment calls: `soccer`/`football` subreddit patterns in the WC pack blur ALL football content during the tournament (acceptable — that's where results leak); country names deliberately NOT keywords (false-positive machine); "penalties"/"full time" are WC-scoped enough. Revisit pack after group stage feedback.
+
 **2026-06-11 session, part 2 (v0.5.0) — community pack registry (arpit's priority):**
 - Model: uBlock-filter-list style. `packs/` in this repo IS the registry — plain JSON, `packs/index.json` as catalog, served from GitHub raw (CORS-open, no backend, contributions via normal PRs).
 - Options page gained a **Community packs** browser: fetches the catalog, lists packs with Add/"Re-sync" buttons; installs go through the shared `mergeTopicsInto()` (refactored out of importConfig; reports "N added, M extended — nothing removed"). Installed pack ids tracked under a separate `registry` storage key (kept out of the topic config schema on purpose — migrate() would strip unknown fields). Registry URL is user-editable (forks can self-host).

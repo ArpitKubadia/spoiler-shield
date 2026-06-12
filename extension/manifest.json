@@ -1,8 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "Spoiler Shield",
-  "version": "0.5.0",
-  "description": "Blur spoiler posts on Reddit by toggleable topic (subreddit patterns + keywords).",
+  "name": "Spoiler Shield: Hide Reddit Spoilers",
+  "short_name": "Spoiler Shield",
+  "version": "0.6.0",
+  "description": "Blur Reddit spoilers by topic — World Cup, F1, TV shows. Toggle until you've watched; posts blur even from subs you don't follow.",
+  "homepage_url": "https://github.com/ArpitKubadia/spoiler-shield",
   "permissions": ["storage"],
   "background": {
     "service_worker": "src/background.js"

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.0 (2026-06-11)
+- FIFA World Cup pack (`packs/fifa-worldcup.json`) + featured first in the registry; World Cup and Formula 1 are now both built-in default topics on fresh installs (kept in sync with their packs)
+- Store-ready metadata: name "Spoiler Shield: Hide Reddit Spoilers", keyword-rich description, `homepage_url` → GitHub repo
+- `docs/STORE_LISTING.md` rewritten as a launch kit: World Cup/F1-led copy, SEO notes, exact screenshot shot list, promo-tile spec, launch checklist
+- Registry is LIVE: https://github.com/ArpitKubadia/spoiler-shield
+
 ## 0.4.0 (2026-06-11)
 - Import now merges and dedupes (case-insensitive) instead of replacing — it only ever adds topics/entries, never overwrites or deletes
 - First install opens the options page (onboarding)
