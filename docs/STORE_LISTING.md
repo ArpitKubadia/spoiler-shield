@@ -67,15 +67,15 @@ The Chrome Web Store indexing engine prioritizes **Extension Name**, **Summary**
 
 ## Assets prepared
 
-Final store assets live in **`dist/assets/`**, built by `scripts/crop_assets.py` (run with `.venv/bin/python`; crop boxes are hand-tuned to the raw grabs in `screenshots/`, which stay local/un-committed). Upload screenshots in this order:
+Final store assets live in **`dist/assets/`**, built by `scripts/crop_assets.py` (run with `.venv/bin/python`). These are *designed marketing frames*, not raw crops: brand gradient background, headline + subline, and the real product screenshot cropped to its money region inside a fake-browser window with a soft shadow. Crop boxes are hand-tuned to the raw grabs in `screenshots/` (local, gitignored). Upload in this order:
 
-1. **`01_worldcup_before_after.png` (1280×800):** split-frame — r/worldcup post-match score card fully visible vs. the same page blurred with the "FIFA World Cup spoiler — click to reveal" badge. Labeled WITHOUT / WITH bands.
-2. **`02_formula1_before_after.png` (1280×800):** split-frame — race podium results vs. blurred with badges.
-3. **`03_home_feed_ambush.png` (1280×800):** home feed with a blurred World Cup post sitting between normal posts — the "spoilers from subs you don't follow" story.
-4. **`04_options_community_packs.png` (1280×800):** options page with the Community packs browser and topic editor.
-5. **`promo_tile_440x280.png`:** small promo tile — gradient, shield logo, "Watch first. Scroll later."
+1. **`01_worldcup_before_after.png`** — "Match results, hidden until you watch": two browser cards, the r/worldcup score card vs. the same page blurred + badge, labeled WITHOUT / WITH.
+2. **`02_formula1_blurred_feed.png`** — "Race day on Reddit, spoiler-free": tall r/formula1 column, two reveal badges framing fully blurred posts.
+3. **`03_home_feed_ambush.png`** — "Recommended subs can't ambush you": blurred World Cup post between normal posts on the home feed.
+4. **`04_community_packs.png`** — "One-click topic packs": feature text beside the Community packs panel.
+5. **`promo_tile_440x280.png`** — small promo tile (or replace with an AI-generated brand tile; see PLAN notes).
 
-*(Optional 5th screenshot, not yet taken: the toolbar popup open over a blurred feed showing the FIFA World Cup / Formula 1 toggles. If you grab it — full-screen, popup open — add a crop entry to crop_assets.py.)*
+*(Optional 5th screenshot, not yet taken: the toolbar popup open over a blurred feed showing the toggles. Grab it full-screen and add a crop entry to crop_assets.py.)*
 
 ---
 

@@ -144,6 +144,10 @@ Work through in order. Each has a Definition of Done; update the Progress Log wh
 
 - [x] M6 distribution prep (2026-06-11, v0.4.0) — session notes below.
 
+**2026-06-12 session, part 2 — assets redesigned as marketing frames:**
+- Arpit found the raw-crop versions hideous (he was right). Rebuilt `scripts/crop_assets.py` to compose each 1280×800 as a designed card: purple gradient bg, headline/subline (Helvetica), real screenshot region inside a fake-browser window (traffic lights + URL pill) with rounded corners and soft shadow. Four assets verified visually; 02/04 renamed (`02_formula1_blurred_feed.png`, `04_community_packs.png`).
+- Principle recorded: store screenshots stay REAL product (CWS wants representative shots; AI-generated UI looks uncanny) — AI image generation is only appropriate for pure brand art (promo tile / 1400×560 marquee). Gave arpit a GPT-image prompt for those; PIL tile remains the fallback.
+
 **2026-06-12 session — store assets from arpit's raw screenshots:**
 - Arpit shot 7 raw screenshots (screenshots/, kept local & gitignored — note: macOS names contain U+202F narrow no-break space before "PM"). Gemini's OCR-classify + one-generic-crop-per-class approach failed (same box stamped on everything); replaced `scripts/crop_assets.py` with hand-tuned per-shot crops after inspecting every image visually.
 - Final assets in dist/assets (regenerate: `.venv/bin/python scripts/crop_assets.py`): 01 WC before/after split-frame, 02 F1 before/after split-frame (both with WITHOUT/WITH label bands — the two matched pairs arpit shot are the strongest possible store format), 03 home-feed ambush shot, 04 options page (white-padded to 1.6 aspect to keep the Save button), promo tile 440×280 (gradient + logo + tagline, title auto-fit). All verified visually at 1280×800.
