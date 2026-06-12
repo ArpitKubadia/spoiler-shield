@@ -27,7 +27,7 @@ function mergeUnique(base, extra) {
 // Community pack registry: the packs/ folder of the open-source repo, served
 // raw from GitHub. After publishing the repo, replace REPLACE_WITH_YOUR_USER
 // below (one place) — the packs browser and Share-to-GitHub flow light up.
-const REPO_URL = "https://github.com/REPLACE_WITH_YOUR_USER/spoiler-shield";
+const REPO_URL = "https://github.com/ArpitKubadia/spoiler-shield";
 const DEFAULT_REGISTRY_URL =
   REPO_URL.replace("github.com", "raw.githubusercontent.com") +
   "/main/packs/index.json";
