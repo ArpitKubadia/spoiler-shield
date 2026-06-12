@@ -1,6 +1,7 @@
 # Changelog
 
 ## 0.6.0 (2026-06-11)
+- New logo: slashed eye inside the shield — spoiler semantics ("don't show me"), deliberately generic across all topics, not sport-branded
 - FIFA World Cup pack (`packs/fifa-worldcup.json`) + featured first in the registry; World Cup and Formula 1 are now both built-in default topics on fresh installs (kept in sync with their packs)
 - Store-ready metadata: name "Spoiler Shield: Hide Reddit Spoilers", keyword-rich description, `homepage_url` → GitHub repo
 - `docs/STORE_LISTING.md` rewritten as a launch kit: World Cup/F1-led copy, SEO notes, exact screenshot shot list, promo-tile spec, launch checklist
