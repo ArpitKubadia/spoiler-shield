@@ -1,73 +1,106 @@
 # Chrome Web Store submission kit
 
-Everything needed to publish. Build the upload zip with `scripts/package.sh`.
+Everything needed to publish the extension. Build the upload zip with `scripts/package.sh`.
+
+---
 
 ## Listing copy
 
-**Name (from manifest):** Spoiler Shield: Hide Reddit Spoilers
+### **Name (from manifest):** 
+`Spoiler Shield - Reddit Spoiler Blocker` (39 chars / max 45)
 
-**Summary (≤132 chars):**
-> It's World Cup season. Toggle a topic on until you've watched — Reddit posts blur, even from subreddits you don't follow.
+### **Summary (≤132 chars):**
+> Block F1, FIFA World Cup, TV show, and movie spoilers on Reddit. Automatically blurs titles and thumbnails on your home feed. (125 chars)
 
-**Description:**
-> The World Cup is on. The F1 season is on. And Reddit does not care that you haven't watched yet — spoilers hit you from subreddits you don't even follow, the moment you open the app.
+### **Description:**
+> Avoid spoilers on Reddit before you’ve watched! Whether it's a Formula 1 race, a FIFA World Cup soccer match, the latest anime episode, or a major TV show finale, Spoiler Shield blocks spoilers instantly so you can browse Reddit stress-free.
 >
-> Spoiler Shield hides Reddit spoilers by topic. Before you open Reddit, flip "FIFA World Cup" or "Formula 1" on from the toolbar: every matching post — title AND thumbnail — is blurred with a "spoiler — click to reveal" badge. Watched the match? Toggle off, or reveal posts one at a time. Both topics come built in, ready to enable.
+> Reddit recommendations and recommended subreddits often leak results directly onto your home feed from subreddits you don't even follow. Spoiler Shield acts as your personal shield, blurring matching posts — titles AND thumbnails — with a clean "spoiler — click to reveal" badge.
 >
-> WHY IT CATCHES WHAT OTHERS MISS
-> A topic isn't a list of subreddits — it's subreddit wildcard patterns (*f1*, *worldcup*) plus title keywords (Verstappen, Mbappé, "penalty shootout", "full time"). So it blurs the post Reddit recommends from r/MercedesAMGF1 you've never visited, and the result that leaks into r/sports.
+> ### 🏆 KEY FEATURES
 >
-> COMMUNITY TOPIC PACKS
-> Don't build keyword lists alone. Browse community packs (World Cup, Formula 1, Football, Cricket, NBA, UFC) and add one in a click. Packs are open source — anyone can improve them or share their own, and updates only ever ADD to your setup, never overwrite it. TV shows, anime, any fandom: make a topic, share it.
+> • **Instant Pre-Paint Blurring:** Spoilers are hidden *before* they render on the page. No flash, no leaks, and no accidental glances.
+> • **Subreddit & Keyword Wildcards:** Create filters using subreddit wildcards (e.g., `*f1*`, `*worldcup*`) and title keywords (e.g., "Verstappen", "penalty shootout", "Mbappé", "full time", "leak").
+> • **Click-to-Reveal:** Want to see a specific post? Just click it to reveal its content. The rest of your feed stays protected, and the topic filter remains enabled.
+> • **Community Packs:** Save time by importing community-curated packs for Formula 1, Football (Soccer), Cricket, NBA, UFC, and more.
+> • **Privacy First & Open Source:** Free, MIT-licensed, no accounts, and no tracking. All processing and storage happen locally inside your browser.
 >
-> • Blurs spoilers on feeds, subreddit pages, and search results (new Reddit)
-> • No spoiler flash: posts are hidden before they ever paint on feeds
-> • Click-to-reveal one post at a time; topics stay on
-> • Free, open source (MIT), no accounts, no tracking — nothing leaves your browser
+> ---
+>
+> ### 🏁 FORMULA 1 (F1) SPOILER PROTECTION
+> Never get qualifying or race results spoiled again. Block race outcomes, podium standings, and driver drama.
+> • **Subreddit patterns:** `formula1`, `formuladank`, `*f1*`, `grandprix*`, `redbullracing`, `mercedesamgf1`, etc.
+> • **Keywords:** `Verstappen`, `Hamilton`, `Norris`, `Leclerc`, `Piastri`, `qualifying`, `pole position`, `GP`, `winner`, `podium`.
+>
+> ### ⚽ FIFA WORLD CUP & SPORTS SPOILERS
+> Block match scores, penalty shootouts, injury updates, and tournament brackets for major sporting events.
+> • **Subreddit patterns:** `worldcup`, `soccer`, `football`, `sports`, `*worldcup*`, etc.
+> • **Keywords:** `FIFA`, `World Cup`, `shootout`, `hat trick`, `penalty`, `semi final`, `full time`, and star players like `Mbappé` or `Yamal`.
+>
+> ### 🎬 TV SHOWS, MOVIES, ANIME & GEEK CULTURE
+> Safely surf Reddit during season finales, premiere nights, or comic book releases.
+> • **Subreddit patterns:** `television`, `movies`, `anime`, `houseofthedragon`, `severance*`, etc.
+> • **Keywords:** plot twists, character deaths, finale, post-credit, leaks, review, spoiler, `Severance`, `Lumon`.
+>
+> ---
+>
+> ### ⚙️ WHY IT WORKS BETTER
+>
+> Standard keyword filters often fail because they only check titles and miss recommendations. Spoiler Shield compiles your wildcards and keywords into highly optimized regular expressions, scanning Reddit's dynamic feeds (www.reddit.com) in real-time as you scroll.
 >
 > Watch first. Scroll later.
+>
+> ---
+> **Category:** Social & Communication
+> **Language:** English (US)
 
-**Category:** Social & Communication. **Language:** English.
+---
 
-**SEO notes:** the store indexes name + summary + description. High-intent phrases worked in naturally above: "hide Reddit spoilers", "spoiler blocker", "blur spoilers", "World Cup", "Formula 1 / F1", "TV shows". Don't keyword-stuff beyond this — CWS flags spam, and reviews/installs matter more for ranking than copy.
+## SEO Optimization Strategy
 
-## Assets needed (arpit provides screenshots; specs below)
+The Chrome Web Store indexing engine prioritizes **Extension Name**, **Summary**, and **Description** density:
+1. **High-Volume Search Phrases:** We naturally integrated phrases like *"Reddit spoiler blocker"*, *"block spoilers on Reddit"*, *"Formula 1 spoiler blocker"*, and *"FIFA World Cup spoiler filter"*.
+2. **Sports & TV Relevance:** By maintaining dedicated sections for F1, FIFA World Cup, and TV shows, we index on high-intent names (Verstappen, Hamilton, FIFA, World Cup, soccer, television) while keeping a generic name.
+3. **Keyword Density:** Avoided keyword stuffing (which Chrome Web Store spam filters flag) by embedding keywords in readable, value-driven feature lists.
 
-All screenshots **exactly 1280×800** (easiest: make the Chrome window roughly that size, screenshot it, then crop to 1280×800 in Preview — Tools → Adjust Size/Crop). Take in this order; #1 is the one most people see:
+---
 
-1. **HERO — home feed mid-block:** reddit.com home with World Cup + F1 toggled on; 2–3 blurred cards with purple badges visible BETWEEN normal posts (the contrast sells it). No NSFW/embarrassing posts visible.
-2. **The toggle moment:** same feed with the toolbar popup open showing "FIFA World Cup" and "Formula 1" switches on.
-3. **Options page:** Community packs section (packs list now loads live from your GitHub) above your topic cards.
-4. **Search results:** search "verstappen" or "world cup", results blurred with badges.
-5. *(Optional)* One revealed post next to still-blurred ones — shows click-to-reveal.
+## Assets prepared
 
-**Small promo tile (440×280, strongly recommended — it's what shows in store browse):** purple background (#7C3AED), the shield icon (extension/icons/icon128.png), "Spoiler Shield" + tagline "Watch first. Scroll later." Five minutes in Canva/Figma; or crop the hero screenshot and overlay the title.
+Final store assets live in **`dist/assets/`**, built by `scripts/crop_assets.py` (run with `.venv/bin/python`; crop boxes are hand-tuned to the raw grabs in `screenshots/`, which stay local/un-committed). Upload screenshots in this order:
 
-## Launch checklist (beyond the store)
+1. **`01_worldcup_before_after.png` (1280×800):** split-frame — r/worldcup post-match score card fully visible vs. the same page blurred with the "FIFA World Cup spoiler — click to reveal" badge. Labeled WITHOUT / WITH bands.
+2. **`02_formula1_before_after.png` (1280×800):** split-frame — race podium results vs. blurred with badges.
+3. **`03_home_feed_ambush.png` (1280×800):** home feed with a blurred World Cup post sitting between normal posts — the "spoilers from subs you don't follow" story.
+4. **`04_options_community_packs.png` (1280×800):** options page with the Community packs browser and topic editor.
+5. **`promo_tile_440x280.png`:** small promo tile — gradient, shield logo, "Watch first. Scroll later."
 
-- GitHub repo → About: description "Chrome extension that blurs Reddit spoilers by topic — World Cup, F1, TV shows. Community topic packs." Topics: `chrome-extension`, `reddit`, `spoilers`, `spoiler-blocker`, `formula1`, `world-cup`, `manifest-v3`.
-- Once the store listing is live, add its link to the README install section (store install beats load-unpacked for normal users).
-- Posting ideas (one honest "I built this" post, not spam): r/chrome_extensions, r/SideProject, Show HN; F1/soccer subreddits only where self-promo rules allow, framed as "I kept getting race results spoiled by recommended subs, so I built a topic-based blur". Time it to a race weekend / knockout round.
+*(Optional 5th screenshot, not yet taken: the toolbar popup open over a blurred feed showing the FIFA World Cup / Formula 1 toggles. If you grab it — full-screen, popup open — add a crop entry to crop_assets.py.)*
 
-## Required justifications (Privacy tab)
+---
 
-- **Single purpose:** Hides user-selected spoiler topics on reddit.com by blurring matching posts.
-- **storage permission:** Saves the user's topic lists and toggle state, synced via Chrome's own storage sync.
-- **Host access (www.reddit.com, sh.reddit.com):** The content script must read post titles/subreddit names on Reddit pages to decide what to blur. All matching happens locally.
-- **Remote code:** None. The only network activity is fetching community topic-pack JSON (data, not code) from this project's public GitHub repo, and only when the user opens the options page or clicks Add/Refresh there.
+## Launch checklist
 
-## Privacy policy (host this text anywhere public, e.g. a GitHub page, and link it)
+1. **GitHub Repository Setup:**
+   - **About Description:** *Chrome extension that blurs Reddit spoilers by topic — F1, FIFA World Cup, TV shows. Community topic packs.*
+   - **Repository Tags:** `chrome-extension`, `reddit`, `spoilers`, `spoiler-blocker`, `formula1`, `world-cup`, `manifest-v3`, `soccer`, `television`.
+2. **Live Store Link:** Once approved, add the Chrome Web Store installation link to the `README.md` file.
+3. **Launch Promotion:** Time your announcement posts on r/chrome_extensions, r/SideProject, and Show HN to coincide with an F1 race weekend or a World Cup knockout round.
 
-> Spoiler Shield does not collect, transmit, sell, or share any data. All settings (topic names, subreddit patterns, keywords, toggles) are stored in Chrome's extension storage in your browser and, if you're signed into Chrome, synced by Google's chrome.storage.sync — never by us. The extension's only network requests fetch the public community topic-pack catalog (JSON files in the project's open-source GitHub repository) when you open its options page; nothing about you is sent. Page content is read only locally to decide which posts to blur and is never recorded.
+---
 
-## Submission steps
+## Privacy Justifications (Developer Console)
 
-1. One-time: register as a Chrome Web Store developer ($5) at https://chrome.google.com/webstore/devconsole
-2. `scripts/package.sh` → upload `dist/spoiler-shield-v*.zip`
-3. Fill listing copy + justifications from above; link the privacy policy
-4. Assets needed: at least one 1280×800 screenshot (blurred F1 feed with badges is the money shot; plus the popup and the options page), and the 128px icon (already in the zip)
-5. Submit for review (usually 1–3 days for an extension with this little surface)
+*When submitting, fill in the Privacy Tab with these justifications to ensure quick approval:*
 
-## Sharing without the store
+- **Single purpose:** "Hides user-selected spoiler topics on reddit.com by blurring matching posts."
+- **Storage permission:** "Saves the user's custom topic lists and toggle state, synchronized across devices via Chrome's secure storage sync."
+- **Host access (`*://www.reddit.com/*`, `*://sh.reddit.com/*`):** "The content script requires host access to inspect post titles, flair, and subreddit names on Reddit pages locally in the browser to determine which posts match the spoiler filters."
+- **Remote code:** "None. The extension does not load or run remote code. The only network request fetches public community topic packs (static JSON data) from the open-source GitHub repository when the user manually opens the options page."
 
-Send someone the zip from `scripts/package.sh`: they unzip it, open chrome://extensions, enable Developer mode, "Load unpacked", select the folder. Caveat: unpacked installs don't auto-update and Chrome periodically nags about developer-mode extensions.
+---
+
+## Privacy Policy Text
+
+> **Spoiler Shield Privacy Policy**
+> Spoiler Shield does not collect, transmit, sell, or share any personal data. All settings, including topic names, subreddit patterns, title keywords, and toggle states, are stored locally in your browser's extension storage. If you are signed into Chrome, these settings are synchronized across your devices using Google's secure `chrome.storage.sync` API. The extension's only network communication is fetching public, open-source topic pack catalog JSON files from our GitHub repository when you open the options page. No user information is transmitted or recorded.

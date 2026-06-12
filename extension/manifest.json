@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Spoiler Shield: Hide Reddit Spoilers",
+  "name": "Spoiler Shield - Reddit Spoiler Blocker",
   "short_name": "Spoiler Shield",
   "version": "0.6.0",
-  "description": "Blur Reddit spoilers by topic — World Cup, F1, TV shows. Toggle until you've watched; posts blur even from subs you don't follow.",
+  "description": "Block F1, FIFA World Cup, TV show, and movie spoilers on Reddit. Automatically blurs titles and thumbnails on your home feed.",
   "homepage_url": "https://github.com/ArpitKubadia/spoiler-shield",
   "permissions": ["storage"],
   "background": {

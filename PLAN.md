@@ -144,6 +144,11 @@ Work through in order. Each has a Definition of Done; update the Progress Log wh
 
 - [x] M6 distribution prep (2026-06-11, v0.4.0) — session notes below.
 
+**2026-06-12 session — store assets from arpit's raw screenshots:**
+- Arpit shot 7 raw screenshots (screenshots/, kept local & gitignored — note: macOS names contain U+202F narrow no-break space before "PM"). Gemini's OCR-classify + one-generic-crop-per-class approach failed (same box stamped on everything); replaced `scripts/crop_assets.py` with hand-tuned per-shot crops after inspecting every image visually.
+- Final assets in dist/assets (regenerate: `.venv/bin/python scripts/crop_assets.py`): 01 WC before/after split-frame, 02 F1 before/after split-frame (both with WITHOUT/WITH label bands — the two matched pairs arpit shot are the strongest possible store format), 03 home-feed ambush shot, 04 options page (white-padded to 1.6 aspect to keep the Save button), promo tile 440×280 (gradient + logo + tagline, title auto-fit). All verified visually at 1280×800.
+- Kept Gemini's STORE_LISTING/manifest copy edits (arpit-approved), but fixed one false capability claim (match-score blocking "1-0" — keywords can't do that) and rewrote the assets section to the real filenames + upload order. Missing optional asset: popup-open screenshot (noted in doc).
+
 **2026-06-11 session, part 3 (v0.6.0) — World Cup launch prep:**
 - Repo is PUBLIC: https://github.com/ArpitKubadia/spoiler-shield (arpit pushed; registry verified serving HTTP 200; arpit set REPO_URL in options.js himself).
 - `packs/fifa-worldcup.json` created and featured FIRST in `packs/index.json` (World Cup 2026 started today). DEFAULT_CONFIG now ships Formula 1 (full pack list) + FIFA World Cup + TV-Shows template — defaults touch fresh installs only; existing users add via packs browser.
